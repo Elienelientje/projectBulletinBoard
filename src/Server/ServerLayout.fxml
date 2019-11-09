@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.ServerController">
+   <children>
+      <Button fx:id="startButton" layoutX="26.0" layoutY="21.0" mnemonicParsing="false" onAction="#startServer" text="Start Server" />
+      <TextArea fx:id="feedback" layoutX="241.0" layoutY="46.0" prefHeight="335.0" prefWidth="338.0" />
+      <Label layoutX="241.0" layoutY="25.0" text="Server feedback:" />
+      <Label fx:id="hostname" layoutX="97.0" layoutY="85.0" text="/" />
+      <Label fx:id="ip" layoutX="97.0" layoutY="110.0" text="/" />
+      <Label layoutX="26.0" layoutY="110.0" text="IP:" />
+      <Label layoutX="26.0" layoutY="85.0" text="Hostname:" />
+      <Label layoutX="26.0" layoutY="136.0" text="port: " />
+      <Label fx:id="port" layoutX="101.0" layoutY="136.0" text="/" />
+   </children>
+</AnchorPane>
