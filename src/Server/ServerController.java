@@ -18,9 +18,6 @@ public class ServerController {
     private TextArea feedback;
 
     @FXML
-    private Button startButton;
-
-    @FXML
     private Label ip;
 
     @FXML
@@ -29,12 +26,16 @@ public class ServerController {
     @FXML
     private Label port;
 
+    public void setFBText(String text){
+        feedback.appendText(text + "\n");
+    }
+
     @FXML
     private void startServer() throws UnknownHostException {
         if(!serverStarted){
             try {
                 Registry myRegistry = LocateRegistry.createRegistry(1099);
-                myRegistry.rebind("ServerImpl", new ServerImpl());
+                myRegistry.rebind("ServerImpl", new ServerImpl(this));
             } catch (Exception e) {
                 e.printStackTrace();
                 feedback.appendText("Something failed while setting up server\n");
@@ -46,6 +47,7 @@ public class ServerController {
             feedback.appendText("Server up and running!\n");
             serverStarted = true;
         } else feedback.appendText("Server already running\n");
+
     }
 
 }

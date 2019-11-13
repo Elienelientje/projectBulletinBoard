@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.lang.ref.Cleaner;
@@ -21,6 +22,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("ClientLayout.fxml"));
         cc = getController();
         primaryStage.setTitle("Client service");
+        primaryStage.getIcons().add(new Image("https://img.icons8.com/pastel-glyph/2x/person-male.png"));
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
