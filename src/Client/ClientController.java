@@ -23,6 +23,12 @@ import java.util.Scanner;
 import static java.time.zone.ZoneRulesProvider.refresh;
 
 public class ClientController {
+
+    File file = new File("bump.txt");
+    Scanner sc = new Scanner(file);
+    BufferedWriter out = new BufferedWriter(new FileWriter(file));
+
+
     boolean hasConnection = false;
     Registry ServerRegistry;
     ServerInf sinf;
@@ -57,8 +63,6 @@ public class ClientController {
 
     @FXML
     private void openConnection() throws UnknownHostException, FileNotFoundException {
-        File file = new File("bump.txt");
-        Scanner sc = new Scanner(file);
 
         String str = sc.next();
         String[] arrOfStr = str.split(",");
@@ -113,6 +117,10 @@ public class ClientController {
                         rx_tag = object.getTag();
                         appendChatText(object.getMessage(), false);
                         secretKey = Hasher.hash(secretKey);
+
+                        String newValues = secretKey + "," + rx_idx + "," + rx_tag + "," + tx_idx + "," + tx_tag;
+                        out.write(newValues);
+
                     }
 
                 } catch (RemoteException e) {
@@ -175,6 +183,9 @@ public class ClientController {
         this.tx_tag = new_tx_tag;
 
         secretKey = Hasher.hash(secretKey);
+
+        String newValues = secretKey + "," + rx_idx + "," + rx_tag + "," + tx_idx + "," + tx_tag;
+        out.write(newValues);
 
 
     }
