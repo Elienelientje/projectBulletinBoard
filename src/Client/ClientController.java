@@ -24,11 +24,6 @@ import static java.time.zone.ZoneRulesProvider.refresh;
 
 public class ClientController {
 
-    File file = new File("bump.txt");
-    Scanner sc = new Scanner(file);
-    BufferedWriter out = new BufferedWriter(new FileWriter(file));
-
-
     boolean hasConnection = false;
     Registry ServerRegistry;
     ServerInf sinf;
@@ -56,16 +51,13 @@ public class ClientController {
     private TextField userInput;
 
     @FXML
-    private Button openConnection;
-
-    public ClientController() throws IOException {
-    }
-
-    @FXML
     private void openConnection() throws UnknownHostException, FileNotFoundException {
 
+        File file = new File("bump.txt");
+        Scanner sc = new Scanner(file);
         String str = sc.next();
         String[] arrOfStr = str.split(",");
+        sc.close();
 
         secretKey=arrOfStr[0];
         rx_idx=Integer.parseInt(arrOfStr[1]);
@@ -118,8 +110,7 @@ public class ClientController {
                         appendChatText(object.getMessage(), false);
                         secretKey = Hasher.hash(secretKey);
 
-                        String newValues = secretKey + "," + rx_idx + "," + rx_tag + "," + tx_idx + "," + tx_tag;
-                        out.write(newValues);
+                        updateFileVariables();
 
                     }
 
@@ -134,8 +125,6 @@ public class ClientController {
         t.start();
 
     }
-
-
 
     private void appendChatText(String message, boolean me){
         Text t1 = new Text();
@@ -183,9 +172,18 @@ public class ClientController {
         this.tx_tag = new_tx_tag;
 
         secretKey = Hasher.hash(secretKey);
+        System.out.println(secretKey);
+        updateFileVariables();
 
+    }
+
+    private void updateFileVariables() throws IOException {
+
+        File file = new File("bump.txt");
+        BufferedWriter out = new BufferedWriter(new FileWriter(file));
         String newValues = secretKey + "," + rx_idx + "," + rx_tag + "," + tx_idx + "," + tx_tag;
         out.write(newValues);
+        out.close();
 
 
     }

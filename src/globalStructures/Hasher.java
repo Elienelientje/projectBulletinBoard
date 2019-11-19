@@ -12,12 +12,11 @@ public class Hasher {
             MessageDigest sha = MessageDigest.getInstance("SHA-256");
             sha.update(in.getBytes());
             byteArray = sha.digest();
-            out = Arrays.toString(byteArray);
+            out = new String(byteArray).replaceAll(",", "");
         }
         catch (Exception e) {
             System.err.println("Fault with hashing");
         }
-
         return out;
     }
 }
