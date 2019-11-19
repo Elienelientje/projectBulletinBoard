@@ -4,6 +4,7 @@ import globalStructures.*;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -38,10 +39,6 @@ public class ClientController {
 
     int range_idx = 50;
     int length_tag = 50;
-
-    @FXML
-    private TextArea feedback;
-
     @FXML
     private TextFlow chatText;
 
@@ -50,6 +47,8 @@ public class ClientController {
 
     @FXML
     private TextField userInput;
+
+    @FXML private ScrollPane scroll;
 
     @FXML
     private void openConnection() throws UnknownHostException, FileNotFoundException {
@@ -70,7 +69,6 @@ public class ClientController {
         if(!hasConnection){
             String ip = serverIP.getText();
             if(ip.equals("")){
-                feedback.appendText("You need to fill in a hostname or an IP adrees of the server");
                 //TIJDELIJK:
                 InetAddress inetAddress = InetAddress.getLocalHost();
                 ip =  inetAddress.getHostAddress();
@@ -80,16 +78,13 @@ public class ClientController {
                 ServerRegistry = LocateRegistry.getRegistry(ip, 1099);
                 sinf = (ServerInf) ServerRegistry.lookup("ServerImpl");
                 hasConnection = true;
-                feedback.appendText("Connected to server!\n");
                 startListening();
-                feedback.appendText("Listening for messages on server!\n");
             } catch (java.rmi.ConnectException e) {
                 e.printStackTrace();
-                feedback.appendText("Host refused connection!\n");
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else feedback.appendText("Client is already connected\n");
+        }
     }
 
     private void startListening(){
@@ -112,6 +107,8 @@ public class ClientController {
                         secretKey = Hasher.hash(secretKey);
 
                         updateFileVariables();
+
+                        scroll.setVvalue(scroll.getHmax());
 
                     }
 
@@ -155,6 +152,7 @@ public class ClientController {
         if(message.equals(""))return;
         appendChatText(message, true);
         userInput.clear();
+        scroll.setVvalue(scroll.getHmax());
 
         Random rand = new Random();
 
@@ -176,7 +174,6 @@ public class ClientController {
 
         secretKey = Hasher.hash(secretKey);
         updateFileVariables();
-
     }
 
     private void updateFileVariables() throws IOException {

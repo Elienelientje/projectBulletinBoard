@@ -23,7 +23,7 @@ public class Main extends Application {
         cc = getController();
         primaryStage.setTitle("Client service");
         primaryStage.getIcons().add(new Image("https://img.icons8.com/pastel-glyph/2x/person-male.png"));
-        primaryStage.setScene(new Scene(root, 1000, 614));
+        primaryStage.setScene(new Scene(root, 614, 614));
         primaryStage.show();
     }
 
