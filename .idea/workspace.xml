@@ -1,33 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de4e24f4-32e0-4535-9c38-c930e2829dce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Client/ClientController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Client/ClientController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Client/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Client/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Client/ClientLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Client/ClientLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Client/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/META-INF/projectBulletinBoard.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/ServerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/ServerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/ServerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/ServerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/ServerLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/Server/ServerLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/AES.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/AES.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/Hasher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/Hasher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/SerializedObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/SerializedObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/Serializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/Serializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/ServerInf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/ServerInf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projectBulletinBoard/globalStructures/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectBulletinBoard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projectBulletinBoard.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/ClientLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ClientLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ServerLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerLayout.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="ab79c857-b8e1-4e70-b3e9-4ddc9a617488" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,53 +10,49 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1615" />
+    <option name="height" value="1040" />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ip</find>
-      <find>dige</find>
-      <find>diges</find>
-      <find>digest</find>
-      <find>key</find>
-      <find>getM</find>
-      <find>system</find>
-      <find>System</find>
-    </findStrings>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projectBulletinBoard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectBulletinBoard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectBulletinBoard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectBulletinBoard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectBulletinBoard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectBulletinBoard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1TeAoeMsX8Oux605TulVjBITHvI" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Client" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Elien\IdeaProjects\projectBulletinBoard2" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Elien\IdeaProjects\projectBulletinBoard2\src\Client" />
-      <recent name="C:\Users\sveno\Desktop\git\projectBulletinBoard\src\Client" />
-      <recent name="C:\Users\sveno\Desktop\git\projectBulletinBoard\src\Server" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -95,23 +66,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client.Main" />
-      <module name="projectBulletinBoard" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server.Main" />
-      <module name="projectBulletinBoard" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="globalStructures.test" />
+      <option name="MAIN_CLASS_NAME" value="Client.Main" />
       <module name="projectBulletinBoard" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,45 +76,69 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="de4e24f4-32e0-4535-9c38-c930e2829dce" name="Default Changelist" comment="" />
-      <created>1573302178913</created>
+      <changelist id="ab79c857-b8e1-4e70-b3e9-4ddc9a617488" name="Default Changelist" comment="" />
+      <created>1574158708355</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573302178913</updated>
-      <workItem from="1573302180382" duration="4303000" />
-      <workItem from="1573309958096" duration="33000" />
-      <workItem from="1573556549535" duration="22729000" />
-      <workItem from="1573671815758" duration="847000" />
-      <workItem from="1573810365835" duration="1857000" />
-      <workItem from="1574152475502" duration="3030000" />
+      <updated>1574158708355</updated>
+      <workItem from="1574158710252" duration="312000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="312000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20687376" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="ConsoleMavenPlugin" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
