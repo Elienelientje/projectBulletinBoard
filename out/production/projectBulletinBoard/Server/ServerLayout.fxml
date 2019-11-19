@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.ServerController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.ServerController">
    <children>
       <Button fx:id="startButton" layoutX="26.0" layoutY="21.0" mnemonicParsing="false" onAction="#startServer" text="Start Server" />
       <TextArea fx:id="feedback" layoutX="241.0" layoutY="46.0" prefHeight="335.0" prefWidth="338.0" />

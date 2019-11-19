@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.lang.ref.Cleaner;
+//import java.lang.ref.Cleaner;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 

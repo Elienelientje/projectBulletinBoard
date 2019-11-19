@@ -16,24 +16,23 @@ import java.nio.charset.Charset;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.security.MessageDigest;
 import java.util.Random;
+import java.util.Scanner;
+
 
 import static java.time.zone.ZoneRulesProvider.refresh;
 
 public class ClientController {
-
     boolean hasConnection = false;
     Registry ServerRegistry;
     ServerInf sinf;
 
-    int rx_idx = 5;
-    String rx_tag = "shhsd";
-    String rx_secretKey = "test";
+    int rx_idx = 1;
+    String rx_tag = "aaa";
+    String secretKey = "bbbb";
 
-    int tx_idx = 5;
-    String tx_tag = "shhsd";
-    String tx_secretKey = "test";
+    int tx_idx = 1;
+    String tx_tag = "aaa";
 
     int range_idx = 50;
     int length_tag = 50;
@@ -53,8 +52,24 @@ public class ClientController {
     @FXML
     private Button openConnection;
 
+    public ClientController() throws IOException {
+    }
+
     @FXML
-    private void openConnection() throws UnknownHostException {
+    private void openConnection() throws UnknownHostException, FileNotFoundException {
+        File file = new File("bump.txt");
+        Scanner sc = new Scanner(file);
+
+        String str = sc.next();
+        String[] arrOfStr = str.split(",");
+
+        secretKey=arrOfStr[0];
+        rx_idx=Integer.parseInt(arrOfStr[1]);
+        tx_idx=Integer.parseInt(arrOfStr[3]);
+        rx_tag=arrOfStr[2];
+        tx_tag=arrOfStr[4];
+
+
         if(!hasConnection){
             String ip = serverIP.getText();
             if(ip.equals("")){
@@ -91,13 +106,13 @@ public class ClientController {
                             encryptedMessage = sinf.getMessage(rx_idx, rx_tag);
                         }
 
-                        String message = AES.decrypt(encryptedMessage, rx_secretKey) ;
+                        String message = AES.decrypt(encryptedMessage, secretKey) ;
                         SerializedObject object = (SerializedObject) Serializer.fromString(message);
 
                         rx_idx = object.getIdx();
                         rx_tag = object.getTag();
                         appendChatText(object.getMessage(), false);
-                        rx_secretKey = Hasher.hash(rx_secretKey);
+                        secretKey = Hasher.hash(secretKey);
                     }
 
                 } catch (RemoteException e) {
@@ -152,14 +167,14 @@ public class ClientController {
         SerializedObject u = new SerializedObject(message, new_tx_tag, new_tx_idx);
         String serializedU = Serializer.toString(u);
 
-        String encryptedU = AES.encrypt(serializedU, tx_secretKey);
+        String encryptedU = AES.encrypt(serializedU, secretKey);
 
         String oldTagHashed = Hasher.hash(tx_tag);
         sinf.sendMessage(this.tx_idx, encryptedU, oldTagHashed);
         this.tx_idx = new_tx_idx;
         this.tx_tag = new_tx_tag;
 
-        tx_secretKey = Hasher.hash(tx_secretKey);
+        secretKey = Hasher.hash(secretKey);
 
 
     }
