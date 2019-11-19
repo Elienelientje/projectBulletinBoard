@@ -16,6 +16,7 @@ import java.nio.charset.Charset;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Base64;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -130,11 +131,11 @@ public class ClientController {
         Text t1 = new Text();
         if(me){
             t1.setStyle("-fx-fill: #4F8A10;-fx-font-weight:normal;");
-            t1.setText("<le moi> " + message + "\n");
+            t1.setText("<you> " + message + "\n");
 
         } else {
             t1.setStyle("-fx-fill: #692387;-fx-font-weight:normal;");
-            t1.setText("<le vous> " + message + "\n");
+            t1.setText("<stranger> " + message + "\n");
         }
         Platform.runLater(() -> {
             chatText.getChildren().add(t1);
@@ -151,6 +152,7 @@ public class ClientController {
     @FXML
     private void sendMessage() throws IOException {
         String message = userInput.getText();
+        if(message.equals(""))return;
         appendChatText(message, true);
         userInput.clear();
 
@@ -160,6 +162,7 @@ public class ClientController {
         byte[] array = new byte[length_tag]; // length is bounded by 7
         new Random().nextBytes(array);
         String new_tx_tag = new String(array, Charset.forName("UTF-8"));
+        new_tx_tag= Base64.getEncoder().encodeToString(new_tx_tag.getBytes()).replaceAll(",","");
 
         SerializedObject u = new SerializedObject(message, new_tx_tag, new_tx_idx);
         String serializedU = Serializer.toString(u);
@@ -172,7 +175,6 @@ public class ClientController {
         this.tx_tag = new_tx_tag;
 
         secretKey = Hasher.hash(secretKey);
-        System.out.println(secretKey);
         updateFileVariables();
 
     }

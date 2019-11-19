@@ -19,6 +19,6 @@
          </font></Label>
       <TextField fx:id="userInput" layoutX="20.0" layoutY="521.0" onAction="#onEnter" prefHeight="66.0" prefWidth="490.0" />
       <Button layoutX="522.0" layoutY="516.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="76.0" prefWidth="78.0" style="-fx-background-color: #d8e3ed; -fx-border-color: #021b33; -fx-border-width: 3; -fx-border-radius: 50;" text="Send" />
-      <TextFlow fx:id="chatText" layoutX="20.0" layoutY="67.0" prefHeight="438.0" prefWidth="580.0" style="-fx-background-color: white; -fx-border-color: #021b33; -fx-border-radius: 4; -fx-border-width: 3;" />
+      <TextFlow fx:id="chatText" layoutX="20.0" layoutY="67.0" maxHeight="438.0" prefHeight="438.0" prefWidth="580.0" style="-fx-background-color: white; -fx-border-color: #021b33; -fx-border-radius: 4; -fx-border-width: 3;" />
    </children>
 </AnchorPane>
