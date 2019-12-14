@@ -32,8 +32,9 @@ public class ClientController {
 
     int rx_idx = 1;
     String rx_tag = "aaa";
-    String secretKey = "bbbb";
+    String rx_secretKey = "bbbb";
 
+    String tx_secretKey = "bbbb";
     int tx_idx = 1;
     String tx_tag = "aaa";
 
@@ -59,11 +60,13 @@ public class ClientController {
         String[] arrOfStr = str.split(",");
         sc.close();
 
-        secretKey=arrOfStr[0];
+        rx_secretKey=arrOfStr[0];
         rx_idx=Integer.parseInt(arrOfStr[1]);
-        tx_idx=Integer.parseInt(arrOfStr[3]);
         rx_tag=arrOfStr[2];
-        tx_tag=arrOfStr[4];
+
+        tx_secretKey=arrOfStr[3];
+        tx_idx=Integer.parseInt(arrOfStr[4]);
+        tx_tag=arrOfStr[5];
 
 
         if(!hasConnection){
@@ -98,13 +101,13 @@ public class ClientController {
                             encryptedMessage = sinf.getMessage(rx_idx, rx_tag);
                         }
 
-                        String message = AES.decrypt(encryptedMessage, secretKey) ;
+                        String message = AES.decrypt(encryptedMessage, rx_secretKey) ;
                         SerializedObject object = (SerializedObject) Serializer.fromString(message);
 
                         rx_idx = object.getIdx();
                         rx_tag = object.getTag();
                         appendChatText(object.getMessage(), false);
-                        secretKey = Hasher.hash(secretKey);
+                        rx_secretKey = Hasher.hash(rx_secretKey);
 
                         updateFileVariables();
 
@@ -165,14 +168,14 @@ public class ClientController {
         SerializedObject u = new SerializedObject(message, new_tx_tag, new_tx_idx);
         String serializedU = Serializer.toString(u);
 
-        String encryptedU = AES.encrypt(serializedU, secretKey);
+        String encryptedU = AES.encrypt(serializedU, tx_secretKey);
 
         String oldTagHashed = Hasher.hash(tx_tag);
         sinf.sendMessage(this.tx_idx, encryptedU, oldTagHashed);
         this.tx_idx = new_tx_idx;
         this.tx_tag = new_tx_tag;
 
-        secretKey = Hasher.hash(secretKey);
+        tx_secretKey = Hasher.hash(tx_secretKey);
         updateFileVariables();
     }
 
@@ -180,7 +183,7 @@ public class ClientController {
 
         File file = new File("bump.txt");
         BufferedWriter out = new BufferedWriter(new FileWriter(file));
-        String newValues = secretKey + "," + rx_idx + "," + rx_tag + "," + tx_idx + "," + tx_tag;
+        String newValues = rx_secretKey + "," + rx_idx + "," + rx_tag + "," + tx_secretKey + "," + tx_idx + "," + tx_tag;
         out.write(newValues);
         out.close();
 
