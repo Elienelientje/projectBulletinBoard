@@ -10,7 +10,7 @@ public class Hasher {
         byte[] byteArray = null;
         String out = "";
         try {
-            MessageDigest sha = MessageDigest.getInstance("SHA-256");
+            MessageDigest sha = MessageDigest.getInstance("SHA-512");
             sha.update(in.getBytes());
             byteArray = sha.digest();
             out= Base64.getEncoder().encodeToString(byteArray).replaceAll(",","");
